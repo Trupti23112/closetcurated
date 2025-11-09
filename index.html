@@ -4,22 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Closet Curated — Effortless Style</title>
-  <meta name="description" content="The Closet Curated: timeless wardrobe pieces, curated looks, and affordable style services. Shop bestsellers, browse collections, and get personalised styling." />
+  <meta name="description" content="The Closet Curated: timeless wardrobe pieces, curated looks, and affordable style services." />
   <meta name="keywords" content="The Closet Curated, women fashion, wardrobe, curated outfits, styling" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <meta property="og:title" content="The Closet Curated — Effortless Style" />
-  <meta property="og:description" content="Timeless wardrobe pieces and curated looks you’ll actually wear." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop" />
   <meta name="theme-color" content="#111827"/>
   <style>
     :root{
       --bg:#ffffff;
       --text:#111827;
       --sub:#6b7280;
-      --brand:#111827; /* change this for brand color */
       --accent:#e5e7eb;
       --soft:#f8fafc;
       --radius:20px;
@@ -35,7 +30,6 @@
     .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;border:1px solid var(--text);text-decoration:none;color:var(--bg);background:var(--text);font-weight:600}
     .btn.outline{background:transparent;color:var(--text)}
     .btn.small{padding:9px 14px;font-size:.95rem}
-    .grid{display:grid;gap:18px}
     .hero{padding:56px 0 24px}
     .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
     .hero h1{font-family:"Playfair Display",serif;font-size: clamp(2rem, 4vw + 1rem, 3.2rem);line-height:1.05;margin:0 0 10px}
@@ -46,479 +40,108 @@
     .section{padding:32px 0}
     .section h2{font-family:"Playfair Display",serif;font-size:2rem;margin:0 0 8px}
     .muted{color:var(--sub);margin:0 0 18px}
-    .pill{display:inline-block;padding:6px 12px;border:1px solid var(--accent);border-radius:999px;background:#fff;font-size:.9rem}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .product{overflow:hidden}
-    .product img{width:100%;height:240px;object-fit:cover;display:block}
-    .product .info{padding:12px 14px}
-    .product .info h3{margin:0 0 6px;font-size:1.05rem}
-    .product .info p{margin:0;color:var(--sub);font-size:.95rem}
-    .note{padding:18px;border-left:4px solid var(--text);background:#fff;border-radius:12px}
+    .product img{width:100%;height:240px;object-fit:cover}
+    .info{padding:12px 14px}
     .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .gallery img{width:100%;height:160px;object-fit:cover;border-radius:14px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .cta a{flex:0 0 auto}
     .row{display:flex;gap:18px;flex-wrap:wrap}
     .service{flex:1 1 280px;padding:18px;border:1px solid var(--accent);border-radius:16px;background:#fff}
-    .service h3{margin:0 0 8px}
-    .testi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .quote{padding:16px;border:1px solid var(--accent);border-radius:14px;background:#fff}
-    .quote p{margin:0 0 10px}
-    .newsletter{display:flex;gap:10px}
-    .newsletter input{flex:1;padding:12px 14px;border-radius:999px;border:1px solid var(--accent);outline:none}
-    footer{padding:40px 0 30px;border-top:1px solid var(--accent);margin-top:24px}
-    .links{display:flex;gap:10px;flex-wrap:wrap}
-    .links a{padding:10px 14px;border:1px solid var(--accent);border-radius:999px;text-decoration:none;color:var(--text)}
-    @media (max-width: 900px){
-      .hero-wrap{grid-template-columns:1fr}
-      .cards{grid-template-columns:repeat(2,1fr)}
-      .gallery{grid-template-columns:repeat(2,1fr)}
-      .testi{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 640px){
-      .cards{grid-template-columns:1fr}
-      .testi{grid-template-columns:1fr}
-    }
+    footer{padding:40px 0 30px;border-top:1px solid var(--accent);margin-top:24px;text-align:center;color:var(--sub)}
+    @media (max-width: 900px){.hero-wrap{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width: 640px){.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}}
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "The Closet Curated",
-    "url": "https://example.com",
-    "sameAs": ["https://www.instagram.com/", "https://www.pinterest.com/"],
-    "logo": "https://images.unsplash.com/photo-1520975682031-ae7c3da3a0f5?q=80&w=640&auto=format&fit=crop"
-  }
-  </script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">
-          <div class="brand-logo">CC</div>
-          <div>The Closet Curated</div>
-        </div>
-        <div class="cta">
-          <a class="btn small outline" href="#collections">Shop</a>
-          <a class="btn small" href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-wrap">
-        <div>
-          <span class="pill">Effortless, wearable style</span>
-          <h1>Curated pieces you’ll actually wear.</h1>
-          <p>We hand-pick timeless staples and seasonal edits so you can build a confident wardrobe without the overwhelm. Sizes, prices, and styling tips — all in one place.</p>
-          <div class="cta">
-            <a class="btn" href="#collections">Browse Collections</a>
-            <a class="btn outline" href="#services">Style Services</a>
-          </div>
-        </div>
-        <div class="card hero-img">
-          <img alt="Minimal fashion collage" src="https://images.unsplash.com/photo-1520975682031-ae7c3da3a0f5?q=80&w=1400&auto=format&fit=crop"/>
-        </div>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <div class="brand-logo">CC</div>
+        <div>The Closet Curated</div>
       </div>
-    </section>
-
-    <!-- COLLECTIONS / PRODUCTS -->
-    <section id="collections" class="section">
-      <h2>Collections</h2>
-      <p class="muted">Shop our current edits. Replace images and links with your products.</p>
-      <div class="cards">
-        <article class="product card">
-          <img src="https://images.unsplash.com/photo-1520975940463-5f1b7a5b2e11?q=80&w=1200&auto=format&fit=crop" alt="Coats & Layers"/>
-          <div class="info">
-            <h3>Coats & Layers</h3>
-            <p>Classic trenches, blazers, and everyday outerwear.</p>
-            <div class="cta" style="margin-top:10px"><a class="btn small" href="#contact">Enquire</a></div>
-          </div>
-        </article>
-        <article class="product card">
-          <img src="https://images.unsplash.com/photo-1548883354-94bc1d3f5e6b?q=80&w=1200&auto=format&fit=crop" alt="Everyday Dresses"/>
-          <div class="info">
-            <h3>Everyday Dresses</h3>
-            <p>Easy silhouettes for work, brunch, and travel.</p>
-            <div class="cta" style="margin-top:10px"><a class="btn small" href="#contact">Enquire</a></div>
-          </div>
-        </article>
-        <article class="product card">
-          <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1200&auto=format&fit=crop" alt="Capsule Essentials"/>
-          <div class="info">
-            <h3>Capsule Essentials</h3>
-            <p>Tees, denim, knits, and the perfect white shirt.</p>
-            <div class="cta" style="margin-top:10px"><a class="btn small" href="#contact">Enquire</a></div>
-          </div>
-        </article>
+      <div class="cta">
+        <a class="btn small outline" href="#collections">Shop</a>
+        <a class="btn small" href="#contact">Contact</a>
       </div>
-    </section>
+    </nav>
+  </div>
+</header>
 
-    <!-- SERVICES -->
-    <section id="services" class="section">
-      <h2>Style Services</h2>
-      <p class="muted">Personalised help to make outfits you love.</p>
-      <div class="row">
-        <div class="service">
-          <h3>Quick Style Chat</h3>
-          <p>15‑minute WhatsApp consult to pick the right size, colour, or piece. Free.</p>
-          <a class="btn small" href="https://918884051943">Message on WhatsApp</a>
-        </div>
-        <div class="service">
-          <h3>Mini Closet Edit</h3>
-          <p>Share photos of your wardrobe; we suggest 6–8 mix‑and‑match looks.</p>
-          <a class="btn small outline" href="#contact">Book Now</a>
-        </div>
-        <div class="service">
-          <h3>Complete Capsule</h3>
-          <p>A season‑ready, budget‑friendly capsule with links to buy everything.</p>
-          <a class="btn small outline" href="#contact">Start a Capsule</a>
-        </div>
+<main class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-wrap">
+      <div>
+        <span class="pill">Effortless, wearable style</span>
+        <h1>Curated pieces you’ll actually wear.</h1>
+        <p>We hand-pick timeless staples and seasonal edits so you can build a confident wardrobe without the overwhelm.</p>
       </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section">
-      <h2>People are loving it</h2>
-      <div class="testi">
-        <div class="quote"><p>“So easy to shop — I finally wear everything I own.”</p><span class="muted">— Riya</span></div>
-        <div class="quote"><p>“Great quality for the price. The capsule plan saved me money.”</p><span class="muted">— Neha</span></div>
-        <div class="quote"><p>“Fast replies on WhatsApp and honest sizing advice.”</p><span class="muted">— Aishwarya</span></div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="section">
-      <h2>Lookbook</h2>
-      <p class="muted">Swap these with your own images.</p>
-      <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?q=80&w=1000&auto=format&fit=crop" alt="Look 1"/>
-        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1000&auto=format&fit=crop" alt="Look 2"/>
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop" alt="Look 3"/>
-        <img src="https://images.unsplash.com/photo-1520975940463-5f1b7a5b2e11?q=80&w=1000&auto=format&fit=crop" alt="Look 4"/>
-      </div>
-    </section>
-
-    <!-- NOTE FOR PINTEREST -->
-    <section class="section">
-      <div class="note">
-        <strong>Using this for Pinterest ads?</strong> When you publish this page to a domain (even a free one), you can claim it on Pinterest and run ads with proper tracking.
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p class="muted">Questions or orders? We reply quickly.</p>
-      <div class="row">
-        <a class="btn" href="mailto:Truptihubli23@gmail.com">Email Us</a>
-        <a class="btn outline" href="https://wa.me/918884051943">WhatsApp</a>
-        <a class="btn outline" target="_blank" href="https://www.instagram.com/">Instagram</a>
-        <a class="btn outline" target="_blank" href="https://www.pinterest.com/">Pinterest</a>
-      </div>
-      <div style="height:16px"></div>
-      <form class="newsletter" onsubmit="event.preventDefault(); alert('Thanks! You\'re on the list.');">
-        <input type="email" placeholder="Enter your email for drops & restocks" required />
-        <button class="btn" type="submit">Subscribe</button>
-      </form>
-    </section>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Closet Curated — Effortless Style</title>
-  <meta name="description" content="The Closet Curated: timeless wardrobe pieces, curated looks, and affordable style services. Shop bestsellers, browse collections, and get personalised styling." />
-  <meta name="keywords" content="The Closet Curated, women fashion, wardrobe, curated outfits, styling" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <meta property="og:title" content="The Closet Curated — Effortless Style" />
-  <meta property="og:description" content="Timeless wardrobe pieces and curated looks you’ll actually wear." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop" />
-  <meta name="theme-color" content="#111827"/>
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#111827;
-      --sub:#6b7280;
-      --brand:#111827; /* change this for brand color */
-      --accent:#e5e7eb;
-      --soft:#f8fafc;
-      --radius:20px;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #eee;z-index:10}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
-    .brand-logo{width:42px;height:42px;border-radius:50%;background:#111827;color:#fff;display:grid;place-items:center;font-family:"Playfair Display",serif;letter-spacing:.5px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;border:1px solid var(--text);text-decoration:none;color:var(--bg);background:var(--text);font-weight:600}
-    .btn.outline{background:transparent;color:var(--text)}
-    .btn.small{padding:9px 14px;font-size:.95rem}
-    .grid{display:grid;gap:18px}
-    .hero{padding:56px 0 24px}
-    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    .hero h1{font-family:"Playfair Display",serif;font-size: clamp(2rem, 4vw + 1rem, 3.2rem);line-height:1.05;margin:0 0 10px}
-    .hero p{color:var(--sub);font-size:1.05rem;margin:0 0 22px}
-    .card{background:var(--soft);border:1px solid var(--accent);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero-img{aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden}
-    .hero-img img{width:100%;height:100%;object-fit:cover}
-    .section{padding:32px 0}
-    .section h2{font-family:"Playfair Display",serif;font-size:2rem;margin:0 0 8px}
-    .muted{color:var(--sub);margin:0 0 18px}
-    .pill{display:inline-block;padding:6px 12px;border:1px solid var(--accent);border-radius:999px;background:#fff;font-size:.9rem}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .product{overflow:hidden}
-    .product img{width:100%;height:240px;object-fit:cover;display:block}
-    .product .info{padding:12px 14px}
-    .product .info h3{margin:0 0 6px;font-size:1.05rem}
-    .product .info p{margin:0;color:var(--sub);font-size:.95rem}
-    .note{padding:18px;border-left:4px solid var(--text);background:#fff;border-radius:12px}
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:14px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .cta a{flex:0 0 auto}
-    .row{display:flex;gap:18px;flex-wrap:wrap}
-    .service{flex:1 1 280px;padding:18px;border:1px solid var(--accent);border-radius:16px;background:#fff}
-    .service h3{margin:0 0 8px}
-    .testi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .quote{padding:16px;border:1px solid var(--accent);border-radius:14px;background:#fff}
-    .quote p{margin:0 0 10px}
-    .newsletter{display:flex;gap:10px}
-    .newsletter input{flex:1;padding:12px 14px;border-radius:999px;border:1px solid var(--accent);outline:none}
-    footer{padding:40px 0 30px;border-top:1px solid var(--accent);margin-top:24px}
-    .links{display:flex;gap:10px;flex-wrap:wrap}
-    .links a{padding:10px 14px;border:1px solid var(--accent);border-radius:999px;text-decoration:none;color:var(--text)}
-    @media (max-width: 900px){
-      .hero-wrap{grid-template-columns:1fr}
-      .cards{grid-template-columns:repeat(2,1fr)}
-      .gallery{grid-template-columns:repeat(2,1fr)}
-      .testi{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 640px){
-      .cards{grid-template-columns:1fr}
-      .testi{grid-template-columns:1fr}
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "The Closet Curated",
-    "url": "https://example.com",
-    "sameAs": ["https://www.instagram.com/", "https://www.pinterest.com/"],
-    "logo": "https://images.unsplash.com/photo-1520975682031-ae7c3da3a0f5?q=80&w=640&auto=format&fit=crop"
-  }
-  </script>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">
-          <div class="brand-logo">CC</div>
-          <div>The Closet Curated</div>
-        </div>
-        <div class="cta">
-          <a class="btn small outline" href="#collections">Shop</a>
-          <a class="btn small" href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-wrap">
-        <div>
-          <span class="pill">Effortless, wearable style</span>
-          <h1>Curated pieces you’ll actually wear.</h1>
-          <p>We hand-pick timeless staples and seasonal edits so you can build a confident wardrobe without the overwhelm. Sizes, prices, and styling tips — all in one place.</p>
-          <div class="cta">
-            <a class="btn" href="#collections">Browse Style Guides</a>
-            <a class="btn outline" href="#services">Style Services</a>
-          </div>
-        </div>
-        <div class="card hero-img">
-          <img alt="Minimal fashion collage" src="https://images.unsplash.com/photo-1520975682031-ae7c3da3a0f5?q=80&w=1400&auto=format&fit=crop"/>
-        </div>
-      </div>
-    </section>
-
-    <!-- COLLECTIONS / PRODUCTS -->
-    <section id="collections" class="section">
-      <h2>Collections</h2>
-      <p class="muted">Explore curated outfit ideas, fashion inspiration, and seasonal style edits.</p>
-      <div class="cards">
-        <article class="product card">
-          <img src="https://images.unsplash.com/photo-1520975940463-5f1b7a5b2e11?q=80&w=1200&auto=format&fit=crop" alt="Layering Outfit Ideas"/>
-          <div class="info">
-            <h3>Coats & Layers</h3>
-            <p>Classic trenches, blazers, and everyday outerwear.</p>
-            <div class="cta" style="margin-top:10px"><a class="btn small" href="#contact">Enquire</a></div>
-          </div>
-        </article>
-        <article class="product card">
-          <img src="https://images.unsplash.com/photo-1548883354-94bc1d3f5e6b?q=80&w=1200&auto=format&fit=crop" alt="Casual & Everyday Looks"/>
-          <div class="info">
-            <h3>Everyday Dresses</h3>
-            <p>Easy silhouettes for work, brunch, and travel.</p>
-            <div class="cta" style="margin-top:10px"><a class="btn small" href="#contact">Enquire</a></div>
-          </div>
-        </article>
-        <article class="product card">
-          <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1200&auto=format&fit=crop" alt="Capsule Wardrobe Inspo"/>
-          <div class="info">
-            <h3>Capsule Essentials</h3>
-            <p>Tees, denim, knits, and the perfect white shirt.</p>
-            <div class="cta" style="margin-top:10px"><a class="btn small" href="#contact">Enquire</a></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section">
-      <h2>Style Services</h2>
-      <p class="muted">Personalised help to make outfits you love.</p>
-      <div class="row">
-        <div class="service">
-          <h3>Quick Style Chat</h3>
-          <p>15‑minute WhatsApp consult to pick the right size, colour, or piece. Free.</p>
-          <a class="btn small" href="https://wa.me/0000000000" target="_blank">Message on WhatsApp</a>
-        </div>
-        <div class="service">
-          <h3>Mini Closet Edit</h3>
-          <p>Share photos of your wardrobe; we suggest 6–8 mix‑and‑match looks.</p>
-          <a class="btn small outline" href="#contact">Book Now</a>
-        </div>
-        <div class="service">
-          <h3>Complete Capsule</h3>
-          <p>A season‑ready, budget‑friendly capsule with links to buy everything.</p>
-          <a class="btn small outline" href="#contact">Start a Capsule</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section">
-      <h2>People are loving it</h2>
-      <div class="testi">
-        <div class="quote"><p>“So easy to shop — I finally wear everything I own.”</p><span class="muted">— Riya</span></div>
-        <div class="quote"><p>“Great quality for the price. The capsule plan saved me money.”</p><span class="muted">— Neha</span></div>
-        <div class="quote"><p>“Fast replies on WhatsApp and honest sizing advice.”</p><span class="muted">— Aishwarya</span></div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="section">
-      <h2>Lookbook</h2>
-      <p class="muted">Swap these with your own images.</p>
-      <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?q=80&w=1000&auto=format&fit=crop" alt="Look 1"/>
-        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1000&auto=format&fit=crop" alt="Look 2"/>
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop" alt="Look 3"/>
-        <img src="https://images.unsplash.com/photo-1520975940463-5f1b7a5b2e11?q=80&w=1000&auto=format&fit=crop" alt="Look 4"/>
-      </div>
-    </section>
-
-    <!-- NOTE FOR PINTEREST -->
-    <section class="section">
-      <div class="note">
-        <strong>Using this for Pinterest ads?</strong> When you publish this page to a domain (even a free one), you can claim it on Pinterest and run ads with proper tracking.
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p class="muted">Questions or orders? We reply quickly.</p>
-      <div class="row">
-        <a class="btn" href="mailto:hello@theclosetcurated.com">Email Us</a>
-        <a class="btn outline" target="_blank" href="https://wa.me/0000000000">WhatsApp</a>
-        <a class="btn outline" target="_blank" href="https://www.instagram.com/">Instagram</a>
-        <a class="btn outline" target="_blank" href="https://www.pinterest.com/">Pinterest</a>
-      </div>
-      <div style="height:16px"></div>
-      <form class="newsletter" onsubmit="event.preventDefault(); alert('Thanks! You\'re on the list.');">
-        <input type="email" placeholder="Enter your email for drops & restocks" required />
-        <button class="btn" type="submit">Subscribe</button>
-      </form>
-    </section> <!-- contact ends-->
-     <!-- AMAZON FAVOURITES -->
-    <section class="section">
-      <h2>Amazon Favourites</h2>
-      <p class="muted">Curated pieces from Amazon that match our minimal, everyday style.</p>
-      <div class="row">
-        <div class="service" style="text-align:center;">
-          <img src="https://images.unsplash.com/photo-1548883354-94bc1d3f5e6b?q=80&w=600&auto=format&fit=crop" alt="Amazon Item" style="width:100%;border-radius:16px;margin-bottom:12px;">
-          <h3>Featured Pick</h3>
-          <p class="muted">A curated Amazon find selected for everyday wear.</p>
-          <a class="btn" target="_blank" href="https://amzn.to/47GNnmN">Shop on Amazon</a>
-        </div>
-      </div>
-    </section>
-   </main> <!--DON'T TOUCH THIS-->
-
-  <footer>
-    <div class="container">
-      <div class="row" style="align-items:center;justify-content:space-between">
-        <div>
-          <div class="brand" style="gap:8px"><div class="brand-logo" style="width:32px;height:32px">CC</div> The Closet Curated</div>
-          <p class="muted" style="margin:8px 0 0">© <span id="year"></span> The Closet Curated. All rights reserved.</p>
-        </div>
-        <div class="links">
-          <a href="#collections">Collections</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-          <a target="_blank" href="https://www.pinterest.com/">Pinterest</a>
-        </div>
+      <div class="card hero-img">
+        <img src="https://images.pexels.com/photos/7679729/pexels-photo-7679729.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Hero">
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
-++++
+  <!-- COLLECTIONS -->
+  <section id="collections" class="section">
+    <h2>Collections</h2>
+    <p class="muted">Curated outfit ideas and essential wardrobe edits.</p>
+    <div class="cards">
+      <article class="product card">
+        <img src="https://images.pexels.com/photos/6311397/pexels-photo-6311397.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Coats">
+        <div class="info">
+          <h3>Layering Outfit Ideas</h3>
+          <p class="muted">Classic trenches, blazers, outerwear.</p>
+        </div>
+      </article>
+      <article class="product card">
+        <img src="https://images.pexels.com/photos/7679873/pexels-photo-7679873.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dresses">
+        <div class="info">
+          <h3>Casual & Everyday Looks</h3>
+          <p class="muted">Easy silhouettes for daily wear.</p>
+        </div>
+      </article>
+      <article class="product card">
+        <img src="https://images.pexels.com/photos/6311666/pexels-photo-6311666.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Capsule">
+        <div class="info">
+          <h3>Capsule Wardrobe Inspo</h3>
+          <p class="muted">Tees, denim, knits & essentials.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK -->
+  <section class="section">
+    <h2>Lookbook</h2>
+    <p class="muted">Aesthetic outfit inspiration.</p>
+    <div class="gallery">
+      <img src="https://images.pexels.com/photos/7679751/pexels-photo-7679751.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Look1">
+      <img src="https://images.pexels.com/photos/7679663/pexels-photo-7679663.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Look2">
+      <img src="https://images.pexels.com/photos/7679468/pexels-photo-7679468.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Look3">
+      <img src="https://images.pexels.com/photos/6311596/pexels-photo-6311596.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Look4">
+    </div>
+  </section>
+
+  <!-- AMAZON FAVOURITES -->
+  <section class="section" id="amazon">
+    <h2>Amazon Favourites</h2>
+    <p class="muted">Curated pieces from Amazon you’ll love.</p>
+    <div class="cards">
+      <article class="product card">
+        <img src="https://images.pexels.com/photos/6311349/pexels-photo-6311349.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Amazon Item">
+        <div class="info">
+          <h3>Daily Basic Sweater</h3>
+          <p class="muted">Soft, minimal and perfect for everyday wear.</p>
+          <a class="btn small" target="_blank" href="https://amzn.to/47GNnmN">Shop on Amazon</a>
+        </div>
+      </article>
+    </div>
+
     
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="row" style="align-items:center;justify-content:space-between">
-        <div>
-          <div class="brand" style="gap:8px"><div class="brand-logo" style="width:32px;height:32px">CC</div> The Closet Curated</div>
-          <p class="muted" style="margin:8px 0 0">© <span id="year"></span> The Closet Curated. All rights reserved.</p>
-        </div>
-        <div class="links">
-          <a href="#collections">Collections</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-          <a target="_blank" href="https://www.pinterest.com/">Pinterest</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
-
-
-
-
-
+   
+       
+     
+   
+  
